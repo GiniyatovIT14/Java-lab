@@ -20,8 +20,11 @@ return last + lastlast;
 - **Задача 2**: Проверка положительного числа
 ```java
 // проверка на неотрицательное число
-if (x >= 0) return true;
-else return false;
+if (x >= 0) {
+    return true;
+} else {
+    return false;
+}
 ```
 **Вход:** -5  
 **Вывод:** false
@@ -29,8 +32,12 @@ else return false;
 - **Задача 3**: Проверка заглавной буквы
 ```java
 // определение регистра символа
-if (Character.isUpperCase(x)) return true;
-else if (Character.isLowerCase(x)) return false;
+if (Character.isUpperCase(x)) {
+    return true;
+}
+else if (Character.isLowerCase(x)) {
+    return false;
+}
 ```
 **Вход:** 'A'  
 **Вывод:** true
@@ -38,9 +45,15 @@ else if (Character.isLowerCase(x)) return false;
 - **Задача 4**: Проверка делителей
 ```java
 // проверка делимости чисел друг на друга
-if (a % b == 0) return true;
-else if (b % a == 0) return true;
-else return false;
+if (a % b == 0) {
+    return true;
+}
+else if (b % a == 0) {
+    return true;
+}
+else {
+    return false;
+}
 ```
 **Вход:** 10, 5  
 **Вывод:** true (10 делится на 5)
@@ -57,8 +70,12 @@ return (a % 10) + (b % 10);
 - **Задача 6**: Безопасное деление с проверкой на ноль
 ```java
 // защита от деления на ноль
-if (y == 0) return 0;
-else return (double) x / y;
+if (y == 0) {
+    return 0;
+}
+else {
+    return (double) x / y;
+}
 ```
 **Вход:** 10, 0  
 **Вывод:** 0.0
@@ -66,9 +83,15 @@ else return (double) x / y;
 - **Задача 7**: Сравнение двух чисел
 ```java
 // сравнение и формирование строки результата
-if (x == y) return ("Результат: " + x + " == " + y);
-else if (x > y) return ("Результат: " + x + " > " + y);
-else return ("Результат: " + x + " < " + y);
+if (x == y) {
+    return ("Результат: " + x + " == " + y);
+}
+else if (x > y) {
+    return ("Результат: " + x + " > " + y);
+}
+else {
+    return ("Результат: " + x + " < " + y);
+}
 ```
 **Вход:** 7, 3  
 **Вывод:** "Результат: 7 > 3"
@@ -78,8 +101,9 @@ else return ("Результат: " + x + " < " + y);
 // проверка, равна ли сумма двух чисел третьему
 if ((x + y == z) || (x + z == y) || (y + z == x)) {
     return true;
+} else {
+    return false;
 }
-else return false;
 ```
 **Вход:** 3, 4, 7  
 **Вывод:** true (3 + 4 = 7)
@@ -87,12 +111,15 @@ else return false;
 - **Задача 9**: Определение правильного склонения для возраста
 ```java
 // выбор правильного склонения для русского языка
-if ((x % 10 == 1) & (x % 100 != 11)) return ("год");
+if ((x % 10 == 1) & (x % 100 != 11)) {
+    return ("год");
+}
 else if (((x % 10 == 2) || (x % 10 == 3) || (x % 10 == 4)) 
          & (x % 100 != 12 & x % 100 != 13 & x % 100 != 14)) {
     return ("года");
+} else {
+    return ("лет");
 }
-else return ("лет");
 ```
 **Вход:** 21  
 **Вывод:** "год"
