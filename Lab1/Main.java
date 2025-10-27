@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-class Module_1 {
+class ModuleAll {
     Scanner scanner = new Scanner(System.in);
-
+    
     public int sumLastNums(int x) {      // task 1.2
-        if (x < 0) {
-            System.out.println("Задано отрицательное число! Выход из программы...");
+        if (x > -10 && x < 10) {
+            System.out.println("Заданы данные не по условию задачи!");
             System.exit(1);
         }
 
@@ -38,9 +38,13 @@ class Module_1 {
     }
 
     public boolean isDivisor(int a, int b) {     // task 1.8
-        if (a % b == 0) return true;
-        else if (b % a == 0) return true;
-        else return false;
+        if (a % b == 0) {
+            return true;
+        } else if (b % a == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public int lastNumSum(int a, int b) {       // task 1.10
@@ -151,11 +155,7 @@ class Module_1 {
         System.out.println("Итого -> " + res);
     }
 
-}
-
-class Module_2 {
-    Scanner scanner = new Scanner(System.in);
-
+    // Module 2 methods
     public double SafeDiv(int x, int y) {        // task 2.2
         if (y == 0)
             return 0;
@@ -319,11 +319,8 @@ class Module_2 {
 
         printDays(str);
     }
-}
 
-class Module_3 {
-    Scanner scanner = new Scanner(System.in);
-
+    // Module 3 methods
     public String reverseListNums(int x) {       // task 3.2
         StringBuilder res = new StringBuilder();
 
@@ -480,11 +477,8 @@ class Module_3 {
             }
         }
     }
-}
 
-class Module_4 {
-    Scanner scanner = new Scanner(System.in);
-
+    // Module 4 methods
     public int findLast(int[] arr, int x) {      // task 4.2
         for (int i = arr.length - 1; i >= 0; i--) {
             if (arr[i] == x)
@@ -773,10 +767,7 @@ class Module_4 {
 
 public class Main {
     Scanner scanner = new Scanner(System.in);
-    Module_1 module1 = new Module_1();
-    Module_2 module2 = new Module_2();
-    Module_3 module3 = new Module_3();
-    Module_4 module4 = new Module_4();
+    ModuleAll moduleAll = new ModuleAll();
 
     public void ShowTask() {
         System.out.println("==== Модуль 1. Методы ====");
@@ -817,70 +808,68 @@ public class Main {
         Main main = new Main();
         main.ShowTask();
 
-        main.ShowTask();
-
         if (main.scanner.hasNextInt()) {
             int choiceModule = main.scanner.nextInt();
             switch (choiceModule) {
                 case 1:
-                    main.module1.reshSumLastNums();
+                    main.moduleAll.reshSumLastNums();
                     break;
                 case 2:
-                    main.module1.reshIsPostitve();
+                    main.moduleAll.reshIsPostitve();
                     break;
                 case 3:
-                    main.module1.reshIsUpperCase();
+                    main.moduleAll.reshIsUpperCase();
                     break;
                 case 4:
-                    main.module1.reshIsDivisor();
+                    main.moduleAll.reshIsDivisor();
                     break;
                 case 5:
-                    main.module1.reshLastNumSum();
+                    main.moduleAll.reshLastNumSum();
                     break;
                 case 6:
-                    main.module2.reshSafeDiv();
+                    main.moduleAll.reshSafeDiv();
                     break;
                 case 7:
-                    main.module2.reshMakeDecision();
+                    main.moduleAll.reshMakeDecision();
                     break;
                 case 8:
-                    main.module2.reshSum3();
+                    main.moduleAll.reshSum3();
                     break;
                 case 9:
-                    main.module2.reshAge();
+                    main.moduleAll.reshAge();
                     break;
                 case 10:
-                    main.module2.reshPrintDays();
+                    main.moduleAll.reshPrintDays();
                     break;
                 case 11:
-                    main.module3.reshReverseListNums();
+                    main.moduleAll.reshReverseListNums();
                     break;
                 case 12:
-                    main.module3.reshPow();
+                    main.moduleAll.reshPow();
                     break;
                 case 13:
-                    main.module3.reshEqualNum();
+                    main.moduleAll.reshEqualNum();
                     break;
                 case 14:
-                    main.module3.reshLeftTriangle();
+                    main.moduleAll.reshLeftTriangle();
                     break;
                 case 15:
-                    main.module3.reshGuessGame();
+                    main.moduleAll.reshGuessGame();
                     break;
                 case 16:
-                    main.module4.reshFindLast();
+                    main.moduleAll.reshFindLast();
                     break;
                 case 17:
-                    main.module4.reshAdd();
+                    main.moduleAll.reshAdd();
                     break;
                 case 18:
-                    main.module4.reshReverse();
+                    main.moduleAll.reshReverse();
                     break;
                 case 19:
-                    main.module4.reshConcat();
+                    main.moduleAll.reshConcat();
                     break;
                 case 20:
-                    main.module4.reshDeleteNegative();
+                    main.moduleAll.reshDeleteNegative();
                     break;
                 default:
                     System.out.println("Выбрана задача, отсутствующая в списке");
