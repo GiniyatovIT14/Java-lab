@@ -1,4 +1,3 @@
-# ОТЧЕТ
 ## Лабораторная работа №5. Тема: ШАБЛОНЫ ООП И КОЛЛЕКЦИИ
 
 ---
@@ -11,6 +10,14 @@
 ### **Реализованные классы:**
 - `FractionOperations` (интерфейс)
 - `Fraction` (класс дроби)
+
+### **Поля класса Fraction:**
+```java
+private int numerator;              // Числитель дроби
+private int denominator;            // Знаменатель дроби (не может быть 0)
+private Double cachedDecimalValue;  // Кэшированное вещественное значение
+private boolean isCacheValid;       // Флаг валидности кэша
+```
 
 ### **Ключевые методы:**
 
@@ -73,6 +80,19 @@ System.out.println(f1.equals(f3));     // false
 - `Cat` (класс кота)
 - `CountingCat` (класс-счетчик)
 - `Funs` (утилиты)
+
+### **Поля классов:**
+
+**Класс Cat:**
+```java
+private String name;    // Имя кота
+```
+
+**Класс CountingCat:**
+```java
+private Meowable realCat;    // Ссылка на реального кота
+private int meowCount;       // Счетчик мяуканий
+```
 
 ### **Ключевые методы:**
 
@@ -157,6 +177,15 @@ List<Boolean> booleans = Arrays.asList(true, false, true);
 ### **Цель задания:**
 Обработать файл с именами учеников и сгенерировать уникальные логины по фамилиям.
 
+### **Поля классов:**
+
+**Класс Student:**
+```java
+private String lastName;    // Фамилия ученика
+private String firstName;   // Имя ученика  
+private String login;       // Сгенерированный логин
+```
+
 ### **Ключевые методы:**
 ```java
 public static List<Student> readStudentsFromFile(String filename)
@@ -191,6 +220,13 @@ List<Student> result = LoginGenerator.generateLogins(students);
 
 ### **Цель задания:**
 Найти и отсортировать все уникальные звонкие согласные буквы из текста.
+
+### **Поля класса ConsonantFinder:**
+```java
+private static final Set<Character> VOICED_CONSONANTS = Set.of(
+    'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'л', 'м', 'н', 'р'
+);  // Множество звонких согласных букв
+```
 
 ### **Ключевые методы:**
 ```java
@@ -253,10 +289,29 @@ QueueUtils.reverseQueue(L1, L2);
 ### **Цель задания:**
 Использовать стримы для обработки набора точек по заданным правилам.
 
-### **Ключевые классы:**
+### **Реализованные классы:**
 - `Point` (точка)
 - `Line` (линия) 
 - `Polyline` (ломаная)
+
+### **Поля классов:**
+
+**Класс Point:**
+```java
+private double x;    // Координата X
+private double y;    // Координата Y
+```
+
+**Класс Line:**
+```java
+private Point start;    // Начальная точка линии
+private Point end;      // Конечная точка линии
+```
+
+**Класс Polyline:**
+```java
+private List<Point> points;    // Список точек ломаной линии
+```
 
 ### **Стрим-обработка:**
 ```java
@@ -296,6 +351,12 @@ Polyline result = GeometryStreamProcessor.processPoints(points);
 ### **Цель задания:**
 Обработать файл с именами и номерами с помощью стримов.
 
+### **Поля класса Person:**
+```java
+private String name;      // Имя человека
+private Integer number;   // Номер человека (может быть null)
+```
+
 ### **Стрим-обработка:**
 ```java
 people.stream()
@@ -328,7 +389,3 @@ Map<Integer, List<String>> result = PersonProcessor.processPeople(people);
 // - Имена приведены к правильному регистру
 // - Сгруппировано по номерам
 ```
-
----
-
-Все задания успешно выполнены, продемонстрированы основные принципы ООП и работы с коллекциями в Java.
