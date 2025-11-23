@@ -281,7 +281,7 @@ String info = CacheHandler.getCacheInfo(EmptyCacheClass.class);
 
 ---
 
-## **ЗАДАНИЕ 2: Тестирование (Вариант 4)**
+## **ЗАДАНИЕ 2: Тестирование**
 
 ### **Задача 4: Тест для @Validate**
 
@@ -421,20 +421,9 @@ src/
 │   └── main/                 # Главный класс
 │       └── Main.java
 ```
-
----
-
-## **ЗАПУСК ПРОЕКТА**
-
-### **Запуск демонстрации:**
-```bash
-java ru.Giniyatov.main.Main
-```
-
-### **Запуск тестов:**
-```bash
 mvn test
 ```
 
 Или через IntelliJ IDEA: правой кнопкой на тестовый класс → Run
+
 
